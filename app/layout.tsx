@@ -6,7 +6,7 @@ import { I18nWrapper } from '@/app/ui/containers/i18n-wrapper'
 import { StoreProvider } from '@/app/ui/containers/store-provider'
 import { ThemeAutoSelect } from '@/app/ui/containers/theme-auto-select'
 
-import '@/styles/globals.scss'
+import './styles/globals.scss'
 
 export const viewport: Viewport = {
   initialScale: 1,

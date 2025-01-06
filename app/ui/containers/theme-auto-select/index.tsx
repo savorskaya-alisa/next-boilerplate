@@ -1,10 +1,10 @@
 'use client'
 import { useEffect } from 'react'
+import { useSystemTheme } from '@/app/hooks/use-system-theme'
 import { useAppSelector } from '@/app/store/hooks'
 import { selectedTheme } from '@/app/store/reducers/settings'
 import { Themes } from '@/app/store/reducers/settings/types'
-import { setCookieWindow } from '@/utils/cookie'
-import { useSystemTheme } from '@/utils/hooks/use-system-theme'
+import { setCookieWindow } from '@/app/utils/cookie'
 
 export function ThemeAutoSelect() {
   const systemTheme = useSystemTheme()

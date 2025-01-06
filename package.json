@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
+    "ts": "tsc --noEmit --incremental --watch",
     "dev": "next dev & npm run ts",
     "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "npm run lint:fix && prettier --write '**/*.{ts,tsx,js,json,html,css,scss,md}'",
