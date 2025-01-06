@@ -1,0 +1,33 @@
+@import 'variables.css';
+
+:root {
+  @apply h-full;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background: var(--base-background);
+  height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, system-ui, Helvetica, Arial;
+  color: var(--text-black-primary);
+  @apply h-full;
+}
+
+html {
+  background: var(--base-background);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.radix-themes {
+  @apply flex flex-col;
+}

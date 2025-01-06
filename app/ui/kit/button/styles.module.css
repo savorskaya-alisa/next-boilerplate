@@ -1,0 +1,31 @@
+.wrapper {
+  display: block;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  padding: 6px 16px 6px 12px;
+  gap: 8px;
+  white-space: nowrap;
+  border-radius: 100px;
+  transition:
+    background,
+    color,
+    border 0.3s;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  width: 100%;
+  max-width: 100px;
+  background: var(--alert-success-bg);
+  color: var(--text-black-primary);
+}
