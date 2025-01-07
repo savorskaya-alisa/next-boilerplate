@@ -35,4 +35,4 @@
 
 ## Структура проекта
 
-![alt text](https://github.com/savorskaya-alisa/next-boilerplate/blob/main/docs/images/img.jpg?raw=true)
+![Project structure](https://github.com/savorskaya-alisa/next-boilerplate/blob/main/docs/images/project-structure.jpg?raw=true)
