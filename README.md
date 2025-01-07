@@ -34,3 +34,5 @@
    Теперь приложение доступно по адресу [http://localhost:3000](http://localhost:3000).
 
 ## Структура проекта
+
+![alt text](https://github.com/savorskaya-alisa/next-boilerplate/docs/images/ima.jpg?raw=true)
