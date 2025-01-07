@@ -1,43 +1,69 @@
 {
-  "$schema": "https://json.schemastore.org/eslintrc",
-  "root": true,
-  "extends": ["next/core-web-vitals", "prettier"],
-  "plugins": ["import", "@typescript-eslint"],
+  "$schema": "https://json.schemastore.org/eslintrc", // Указывает на схему JSON для валидации конфигурации ESLint
+  "root": true, // Указывает, что это корневая конфигурация ESLint
+  "extends": [
+    "next/core-web-vitals", // Расширяет настройки ESLint для проектов на Next.js с учетом основных метрик веба
+    "prettier" // Отключает правила ESLint, которые могут конфликтовать с Prettier
+  ],
+  "plugins": [
+    "import", // Плагин для управления импортами и их порядком
+    "@typescript-eslint", // Плагин для поддержки правил TypeScript
+    "react" // Добавлен плагин для поддержки правил React (отсутствовал в предыдущем файле)
+  ],
   "rules": {
     "import/order": [
-      "error",
+      "error", // Уровень ошибки для нарушения порядка импортов
       {
-        "groups": ["builtin", "external", "internal"],
+        "groups": ["builtin", "external", "internal"], // Группы импортов: встроенные, внешние и внутренние
         "pathGroups": [
           {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
+            "pattern": "react", // Указывает, что импорт React должен быть в отдельной группе
+            "group": "external", // Определяет группу для импорта React как внешнего
+            "position": "before" // Позиция импорта React перед другими внешними импортами
           }
         ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "newlines-between": "never",
+        "pathGroupsExcludedImportTypes": ["react"], // Исключает типы импорта из группировки путей
+        "newlines-between": "never", // Не требует пустых строк между группами импортов
         "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
+          "order": "asc", // Сортировка импортов по возрастанию
+          "caseInsensitive": true // Игнорирует регистр при сортировке
         }
       }
     ],
     "@typescript-eslint/no-unused-vars": [
-      "warn",
+      "warn", // Уровень предупреждения для неиспользуемых переменных
       {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
+        "vars": "all", // Проверяет все переменные на неиспользование
+        "varsIgnorePattern": "^_", // Игнорирует неиспользуемые переменные, начинающиеся с _
+        "args": "after-used", // Проверяет аргументы после использования
+        "argsIgnorePattern": "^_" // Игнорирует неиспользуемые аргументы, начинающиеся с _
       }
     ],
-    "react-hooks/exhaustive-deps": "off"
+    // Отключает проверку зависимостей хуков (можно использовать при необходимости)
+    "react-hooks/exhaustive-deps": "off",
+
+    // Запрещает использование операторов console (например, console.log)
+    // Это правило помогает поддерживать чистоту кода и избегать случайных логов в продакшене.
+    // Добавлено из второго файла.
+    "no-console": [
+      "error", // Уровень предупреждения для использования console
+      { "allow": ["warn", "error"] } // Разрешает использование console.warn и console.error
+    ]
   },
-  "settings": {},
+  "settings": {
+    // настройки для React (автоматически определяет версию)
+    "react": {
+      "version": "detect"
+    },
+    // настройки резолвера для поддержки импорта TypeScript
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts", "*.tsx"], // Применяет следующие настройки только к файлам TypeScript
+      // Использует парсер TypeScript для этих файлов
       "parser": "@typescript-eslint/parser"
     }
   ]

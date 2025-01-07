@@ -1,19 +1,19 @@
 {
-  "printWidth": 100,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": false,
-  "singleQuote": true,
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": false,
-  "trailingComma": "none",
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "always",
-  "rangeStart": 0,
-  "requirePragma": false,
-  "insertPragma": false,
-  "proseWrap": "preserve",
-  "htmlWhitespaceSensitivity": "css",
-  "endOfLine": "lf"
+  "printWidth": 100, // Максимальная длина строки
+  "tabWidth": 2, // Два пробела для отступов
+  "useTabs": false, // Использовать пробелы вместо табов
+  "semi": false, // Не использовать точку с запятой в конце строк
+  "singleQuote": true, // Использовать одинарные кавычки вместо двойных
+  "quoteProps": "as-needed", // Добавлять кавычки для свойств объекта только там, где необходимо
+  "jsxSingleQuote": false, // Двойные кавычки в JSX
+  "trailingComma": "none", // Запятые в конце строк объектов и массивов
+  "bracketSpacing": true, // Пробелы между скобками и содержимым
+  "bracketSameLine": false, // Закрывающая угловая скобка в многострочных JSX-компонентах переносится на новую строку
+  "arrowParens": "always", // Всегда использовать круглые скобки в стрелочных функциях
+  "rangeStart": 0, // Форматирование начинается с первого символа файла
+  "requirePragma": false, // Не требуется добавлять специальный комментарий-преамбулу для форматирования файла
+  "insertPragma": false, // Prettier не будет автоматически добавлять комментарий-преамбулу в файлы
+  "proseWrap": "preserve",  // Сохранять переносы строк в текстовых форматах (Markdown и др.) так, как они есть в исходном коде
+  "htmlWhitespaceSensitivity": "css", // Учитывать правила CSS для обработки пробелов в HTML
+  "endOfLine": "lf" // Перевод строки в стиле Unix
 }
